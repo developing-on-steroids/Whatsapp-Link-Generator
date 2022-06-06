@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>WhatsApp Link Generator</title>
+</head>
+<body>
+    <img src="title.png" alt="title">
+    <br>
+    <br>
+    <label for="ip">Enter The Number: </label>
+    <input type="text" id="ip" min="10" max="10">
+
+    <br>
+    <br>
+    <label>Generated Link: </label>
+    <p id="LinkP"><a id="linkText" target="_blank"></a></p> 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a href="https://developing-on-steroids.github.io/AbbasHaidari.io/">Created by by MAD Designers</a>
+
+    <script>
+        var ip = document.getElementById("ip");
+        var linkText = document.getElementById("linkText");
+
+        ip.addEventListener('keypress', function(e) {
+            if (e.key == 'Enter') {
+                var linkGen = 'https://wa.me/' + '91' + ip.value;
+                linkText.innerHTML = '+91 ' + ip.value;
+                linkText.setAttribute("href", linkGen);
+            }
+        } )
+    </script>
+
+</body>
+</html>
